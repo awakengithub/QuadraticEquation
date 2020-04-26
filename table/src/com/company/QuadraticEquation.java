@@ -20,14 +20,14 @@ public class QuadraticEquation {
         } catch (Exception e) {
             System.out.println("You have entered incorrect number, please try again.");
             return;
-        }// input numbers4
+        }// User's input numbers or as I called it User Interface :)
         QuadraticEquation apple = new QuadraticEquation();
         apple.counting(a,b,c);
     }
 
     public ReturningNumber counting(double a, double b, double c) {
         double d2, d3, d0, d5, d, d4,d6;
-        d = b * b - 4 * a * c; // Discriminator, 16-8=8
+        d = b * b - 4 * a * c; // Counting Discriminator
         if (d < 0) { //Discriminator < 0
             System.out.println("No roots");
             return new ReturningNumber(null, null);
@@ -48,8 +48,13 @@ public class QuadraticEquation {
                 return new ReturningNumber(null,null);
             }else{
                 d6 = d2 / d4;
-                d3 = -b - Math.sqrt(d); // First answer "(-b + Math.sqrt(d)) / (2 * a)"
+                d3 = -b - Math.sqrt(d); // First answer
                 d5 = d3 / d4; // Second answer
+                /*
+                 Also, you can try to use this: (-b + Math.sqrt(d)) / (2 * a)
+                 Instead of this: d3 = -b - Math.sqrt(d);
+                 It probably will work as good as the used one.
+                 */
                 System.out.println("The answers are " + d3 + ", " + d5);
                 return new ReturningNumber(d6,d5);
             }
@@ -57,7 +62,7 @@ public class QuadraticEquation {
     }
 }
 
-class ReturningNumber {
+class ReturningNumber { // This class uses for having your answers in the tests
     public ReturningNumber(Double firstreturn, Double secondreturn) {
         this.firstreturn = firstreturn;
         this.secondreturn = secondreturn;
@@ -65,7 +70,7 @@ class ReturningNumber {
 
     Double firstreturn;
     Double secondreturn;
-
+    // *firstreturn* is your first root and *secondreturn* is your second root.
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
