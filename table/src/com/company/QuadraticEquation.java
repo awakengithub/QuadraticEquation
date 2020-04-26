@@ -3,6 +3,9 @@ package com.company;
 import java.util.Objects;
 import java.util.Scanner;
 
+/**
+ * This code can solve you almost any Quadratic Equation task.
+ */
 public class QuadraticEquation {
     public static void main(String[] args) {
         double a, b, c;
