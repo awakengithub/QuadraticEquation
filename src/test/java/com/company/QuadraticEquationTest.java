@@ -31,4 +31,10 @@ public class QuadraticEquationTest {
         ReturningNumber expected = new ReturningNumber(null,null);
         Assert.assertEquals(expected, testing.counting(0,8,9));
     }
+    @Test
+    public void testFail() {
+        QuadraticEquation testing = new QuadraticEquation();
+        ReturningNumber expected = new ReturningNumber(5.0,5.0);
+        Assert.assertEquals(expected, testing.counting(0,8,9));
+    }
 }
