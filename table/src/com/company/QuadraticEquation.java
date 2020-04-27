@@ -7,6 +7,9 @@ import java.util.Scanner;
  * This code can help you to solve almost every Quadratic Equation task (probably).
  */
 public class QuadraticEquation {
+    /**
+     In method "main" there's only User's input numbers
+     */
     public static void main(String[] args) {
         double a, b, c;
         Scanner num = new Scanner(System.in);
@@ -20,11 +23,16 @@ public class QuadraticEquation {
         } catch (Exception e) {
             System.out.println("You have entered incorrect number, please try again.");
             return;
-        }// User's input numbers or as I called it User Interface :)
+        }
         QuadraticEquation apple = new QuadraticEquation();
         apple.counting(a,b,c);
     }
 
+    /**
+     In method "counting" happens all the, uh, counting in the program.
+
+     So all the tests are using exactly this method.
+     */
     public ReturningNumber counting(double a, double b, double c) {
         double d2, d3, d0, d5, d, d4,d6;
         d = b * b - 4 * a * c; // Counting Discriminator
@@ -51,8 +59,10 @@ public class QuadraticEquation {
                 d3 = -b - Math.sqrt(d); // First answer
                 d5 = d3 / d4; // Second answer
                 /*
-                 Also, you can try to use this: (-b + Math.sqrt(d)) / (2 * a)
-                 Instead of this: d3 = -b - Math.sqrt(d);
+                 Also, you can try to use this:
+                 (-b + Math.sqrt(d)) / (2 * a)
+                 Instead of this:
+                 d3 = -b - Math.sqrt(d)
                  It probably will work as good as the used one.
                  */
                 System.out.println("The answers are " + d3 + ", " + d5);
@@ -61,8 +71,10 @@ public class QuadraticEquation {
         }
     }
 }
-
-class ReturningNumber { // This class uses for having your answers in the tests
+/**
+ This class has been used for returning your answers in the tests
+ */
+class ReturningNumber {
     public ReturningNumber(Double firstreturn, Double secondreturn) {
         this.firstreturn = firstreturn;
         this.secondreturn = secondreturn;
