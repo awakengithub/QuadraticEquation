@@ -71,6 +71,7 @@ public class QuadraticEquation {
         }
     }
 }
+
 /**
  This class has been used for returning your answers in the tests
  */
