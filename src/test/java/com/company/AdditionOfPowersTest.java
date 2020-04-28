@@ -16,4 +16,10 @@ public class AdditionOfPowersTest {
         AdditionOfPowers anotherTesting = new AdditionOfPowers();
         Assert.assertEquals(0, anotherTesting.calculate(0));
     }
+
+    @Test
+    public void testNegativeNumbers() {
+        AdditionOfPowers anotherTesting = new AdditionOfPowers();
+        Assert.assertEquals(0, anotherTesting.calculate(-2));
+    }
 }
