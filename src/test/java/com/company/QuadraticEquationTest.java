@@ -14,21 +14,21 @@ public class QuadraticEquationTest {
     @Test
     public void testNoRoots() {
         QuadraticEquation testing = new QuadraticEquation();
-        ReturningNumber expected = new ReturningNumber(null,null);
-        Assert.assertEquals(expected, testing.counting(2,2,1));
+        ReturningNumber expected = new ReturningNumber(null, null);
+        Assert.assertEquals(expected, testing.counting(2, 2, 1));
     }
 
     @Test
     public void testOneRoot() {
         QuadraticEquation testing = new QuadraticEquation();
-        ReturningNumber expected = new ReturningNumber(-1.0,null);
-        Assert.assertEquals(expected, testing.counting(1,2,1));
+        ReturningNumber expected = new ReturningNumber(-1.0, null);
+        Assert.assertEquals(expected, testing.counting(1, 2, 1));
     }
 
     @Test
     public void testZeroes() {
         QuadraticEquation testing = new QuadraticEquation();
-        ReturningNumber expected = new ReturningNumber(null,null);
-        Assert.assertEquals(expected, testing.counting(0,8,9));
+        ReturningNumber expected = new ReturningNumber(null, null);
+        Assert.assertEquals(expected, testing.counting(0, 8, 9));
     }
 }
