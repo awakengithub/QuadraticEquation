@@ -13,14 +13,14 @@ public class AdditionOfPowers {
             System.out.println("You have entered incorrect number, please try again.");
             return;
         }
-        AdditionOfPowers laptop = new AdditionOfPowers();
-        laptop.counting(i);
+        AdditionOfPowers additionOfPowers = new AdditionOfPowers();
+        additionOfPowers.calculate(i);
     } //Entering number and catching errors
 
-    public int counting(int i) {
+    public int calculate(int i) {
         int result = 0;
-        for (int counter = 1; counter <= i;counter++){
-            result = counter*counter + result;
+        for (int counter = 1; counter <= i; counter++) {
+            result = counter * counter + result;
         }
         return result;
     }

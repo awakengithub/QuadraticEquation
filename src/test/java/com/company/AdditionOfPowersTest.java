@@ -3,16 +3,17 @@ package com.company;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class AdditionOfPowersTesting {
+public class AdditionOfPowersTest {
 
     @Test
-    public void testStandard(){
+    public void testStandard() {
         AdditionOfPowers anotherTesting = new AdditionOfPowers();
-        Assert.assertEquals(5,anotherTesting.counting(2));
+        Assert.assertEquals(5, anotherTesting.calculate(2));
     }
+
     @Test
-    public void testZero(){
+    public void testZero() {
         AdditionOfPowers anotherTesting = new AdditionOfPowers();
-        Assert.assertEquals(0,anotherTesting.counting(0));
+        Assert.assertEquals(0, anotherTesting.calculate(0));
     }
 }
